@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
+import dotenv from "dotenv";    //always best practice to import dotenv first
 import OpenAI from "openai";
 dotenv.config();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
+const MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";    // open ai- 4o cheapest model hain 
 
 if (!OPENAI_API_KEY) {
   throw new Error("OPENAI_API_KEY is required in environment.");
@@ -11,6 +11,7 @@ if (!OPENAI_API_KEY) {
 
 const client = new OpenAI({ apiKey: OPENAI_API_KEY });
 
+// required structure which i want to return 
 const FUNCTION_SCHEMA = {
   name: "extract_places",
   description:
@@ -53,10 +54,11 @@ export async function extractPlaces(text) {
     messages,
     functions: [FUNCTION_SCHEMA],
     function_call: { name: "extract_places" },
-    temperature: 0
+    temperature: 0      // 0 means no randomness and most predictable output 
   });
 
-  const fn = resp.choices?.[0]?.message?.function_call;
+  const fn = resp.choices?.[0]?.message?.function_call; //catch the first messegae
+  
   if (!fn?.arguments) {
     throw new Error("OpenAI did not return structured function_call arguments.");
   }

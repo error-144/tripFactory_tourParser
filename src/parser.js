@@ -1,10 +1,7 @@
 import { extractPlaces } from "./openaiClient.js";
 import { geocodePlace } from "./geocodeGoogle.js";
 
-/**
- * parseParagraph(paragraph)
- * returns { tour_text, places: [{name, visited, passby, lat, lon}], metadata }
- */
+
 export async function parseParagraph(paragraph) {
   const extracted = await extractPlaces(paragraph);
   const tourText = extracted.tour_text || paragraph;

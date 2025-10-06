@@ -7,10 +7,7 @@ if (!GOOGLE_API_KEY) {
   throw new Error("GOOGLE_API_KEY is required in environment.");
 }
 
-/**
- * geocodePlace(name)
- * returns { lat: number|null, lon: number|null }
- */
+// Function jo latitude and longitude nikalne ke liye hai 
 export async function geocodePlace(name) {
   if (!name) return { lat: null, lon: null };
   const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
@@ -19,7 +16,7 @@ export async function geocodePlace(name) {
 
   try {
     const res = await fetch(url);
-    const data = await res.json();
+    const data = await res.json();    //convert to json format 
     if (data.status !== "OK" || !data.results || data.results.length === 0) {
       return { lat: null, lon: null };
     }
