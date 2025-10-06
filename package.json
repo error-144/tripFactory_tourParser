@@ -1,15 +1,27 @@
+
 {
-    "name": "tour-parser",
+    "name": "tour-parser",            
     "version": "1.0.0",
     "type": "module",
+    "description": "Extract places from travel text and label visited/pass-by with coordinates",
     "main": "src/index.js",
+    "files": ["src/"],
     "scripts": {
-        "start": "node src/index.js",
-        "test": "node src/index.js \"We left Jaipur, passed Ajmer and Pushkar, and visited Udaipur.\""
+      "start": "node src/index.js",
+      "test": "node test/test.js \"We left Jaipur, passed Ajmer and Pushkar, and visited Udaipur.\""
     },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/error-144/tripFactory_tourParser.git"
+    },
+    "keywords": ["tour", "parser", "travel", "geocoding", "openai"],
+    "author": "Aryan Kumar   s.aryan.kumar040@gmail.com",
+    "license": "MIT",
+    "engines": { "node": ">=18" },
     "dependencies": {
-        "dotenv": "^16.4.5",
-        "node-fetch": "^3.3.2",
-        "openai": "^4.5.0"
+      "dotenv": "^16.4.5",
+      "openai": "^4.5.0",
+      "node-fetch": "^3.3.2"
     }
-}
+  }
+  
