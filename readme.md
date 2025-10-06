@@ -2,6 +2,13 @@
 
 A small  tool that extracts places from a travel paragraph using OpenAI and geocodes (Google Maps API) them with Google Maps Geocoding API.
 
+## Install (npm)
+- Install from npm:
+  ```bash
+  npm install tour-parser
+  ```
+- NPM package: `https://www.npmjs.com/package/tour-parser`
+
 ## Prerequisites
 - Node.js 18+
 - OpenAI API key
@@ -34,6 +41,11 @@ A small  tool that extracts places from a travel paragraph using OpenAI and geoc
     ```bash
     node src/index.js "We started in Delhi, passed by Agra Fort, and visited Jaipur."
     ```
+
+- Another short example:
+  ```bash
+  npm start -- "We left Mumbai, passed through Pune, and visited Goa."
+  ```
 
 - Quick test (uses the sample from package.json):
   ```bash
