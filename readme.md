@@ -62,15 +62,28 @@ The tool prints a JSON object like:
       "name": "Delhi",
       "visited": true,
       "passby": false,
-      "lat": 28.6139,
-      "lon": 77.209
+      "lat": 28.7040592,
+      "lon": 77.10249019999999
+    },
+    {
+      "name": "Agra Fort",
+      "visited": false,
+      "passby": true,
+      "lat": 27.1795328,
+      "lon": 78.021112
+    },
+    {
+      "name": "Jaipur",
+      "visited": true,
+      "passby": false,
+      "lat": 26.9124336,
+      "lon": 75.7872709
     }
-    
   ],
   "metadata": {
-    "model": "gpt-4o-mini",
+    "model": "gpt-5",
     "geocoder": "Google Maps Geocoding API",
-    "timestamp": "2025-01-01T12:00:00.000Z"
+    "timestamp": "2025-10-06T21:45:13.077Z"
   }
 }
 ```
