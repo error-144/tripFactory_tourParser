@@ -54,7 +54,7 @@ export async function extractPlaces(text) {
     messages,
     functions: [FUNCTION_SCHEMA],
     function_call: { name: "extract_places" },
-    temperature: 0      // 0 means no randomness and most predictable output 
+    temperature: 1      // 0 means no randomness and most predictable output 
   });
 
   const fn = resp.choices?.[0]?.message?.function_call; //catch the first messegae
