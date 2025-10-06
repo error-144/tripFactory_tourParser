@@ -1,6 +1,6 @@
 # tour-parser
 
-A small Node.js tool that extracts places from a travel paragraph using OpenAI and geocodes them with Google Maps Geocoding API.
+A small  tool that extracts places from a travel paragraph using OpenAI and geocodes (Google Maps API) them with Google Maps Geocoding API.
 
 ## Prerequisites
 - Node.js 18+
@@ -16,7 +16,7 @@ A small Node.js tool that extracts places from a travel paragraph using OpenAI a
 2. Create a `.env` file in the project root with:
    ```bash
    OPENAI_API_KEY=your_openai_api_key_here
-   # Optional: override the default model (defaults to gpt-4o-mini)
+   
    OPENAI_MODEL=gpt-4o-mini
 
    GOOGLE_API_KEY=your_google_maps_api_key_here
@@ -53,7 +53,7 @@ The tool prints a JSON object like:
       "lat": 28.6139,
       "lon": 77.209
     }
-    // ...
+    
   ],
   "metadata": {
     "model": "gpt-4o-mini",
@@ -65,5 +65,4 @@ The tool prints a JSON object like:
 
 ## Notes
 - Make sure billing/quotas are enabled for both OpenAI and Google Maps APIs.
-- For verbose logs, the tool currently prints progress to the console (model calls, geocoding timings, etc.).
-- If you encounter network or quota errors, re-run after a short delay.
+- if you find any error or issue DM to s.aryan.kumar040@gmail.com
